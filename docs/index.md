@@ -1,8 +1,8 @@
 
 <h1><center>Variational Autoencoder</center></h1>
 This is my implementation of Kingma's variational autoencoder. I tried to be as flexible with the implementation as I could, so different distribution could be used for:
-1. The approximate posterior - *encoder* - $q_{\phi}\left(z|x\right)$
-2. The conditional likelihood of the data - *decoder* - $p_{\theta}\left(x|z\right)$
+1. The approximate posterior - *encoder* - $q\_{\phi}\left(z|x\right)$
+2. The conditional likelihood of the data - *decoder* - $p\_{\theta}\left(x|z\right)$
 3. The prior on the latent space $p\left(z\right)$. Note that this implementation doesn't support a parametrized prior [yet ;)]
 
 This Notebook relies on `Keras` and `ipywidgets` packages.
@@ -244,7 +244,7 @@ class AbstractGaussianPriorPosteriorVAE(AbstractVariationalAutoencoder):
 ```
 
 ### Bernoulli VAE
-We will first assume $p_{\theta}\left(x|z\right)$ is a multivariate Bernoulli:
+We will first assume $p\_{\theta}\left(x|z\right)$ is a multivariate Bernoulli:
 
 
 ```python
@@ -458,7 +458,7 @@ plt.show()
 
 
 ### Gaussian VAE
-Another example we can try is to assume $p_{\theta}\left(x|z\right)$ is a Gaussian with diagonal covariance:
+Another example we can try is to assume $p\_{\theta}\left(x|z\right)$ is a Gaussian with diagonal covariance:
 
 
 ```python
