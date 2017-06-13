@@ -1,7 +1,11 @@
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
 <h1><center>Variational Autoencoder</center></h1>
 This is my implementation of Kingma's variational autoencoder. I tried to be as flexible with the implementation as I could, so different distribution could be used for:
-1. The approximate posterior - *encoder* - \$$q\_{\phi}\left(z|x\right)$$
-2. The conditional likelihood of the data - *decoder* - $p\_{\theta}\left(x|z\right)$
+1. The approximate posterior - *encoder* - \$$q\_{\phi}\left(z\|x\right)$$
+2. The conditional likelihood of the data - *decoder* - $p\_{\theta}\left(x\|z\right)$
 3. The prior on the latent space $p\left(z\right)$. Note that this implementation doesn't support a parametrized prior [yet ;)]
 
 This Notebook relies on `Keras` and `ipywidgets` packages.
