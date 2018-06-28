@@ -273,7 +273,7 @@ class GaussianPriorPosteriorBernoulliVAE(AbstractGaussianPriorPosteriorVAE):
         
     def _negative_expected_log_likelihood(self, x, *likelihood_params):
         p = likelihood_params[0]
-        loss = K.batch_flatten(K.binary_crossentropy(p, x))
+        loss = K.batch_flatten(K.binary_crossentropy(x, p))
         return K.sum(loss, axis=-1)
 ```
 
